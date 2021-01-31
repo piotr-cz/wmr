@@ -45,7 +45,7 @@ const config = {
 			}
 		]
 	},
-	external: [...builtins, '@swc/core'],
+	external: [...builtins],
 	// /* Logs all included npm dependencies: */
 	// external(source, importer) {
 	// 	const ch = source[0];
