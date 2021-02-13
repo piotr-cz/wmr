@@ -20,7 +20,7 @@ export async function normalizeOptions(options, mode) {
 	options.features = {
 		preact: true,
 		jsx: 'h',
-		from: 'preact',
+		from: 'preact'
 	};
 
 	// `wmr` / `wmr start` is a development command.
