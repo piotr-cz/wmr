@@ -32,6 +32,7 @@ const WRITE_CACHE = new Map();
  * @param {string} [options.cwd = '.']
  * @param {string} [options.root] cwd without ./public suffix
  * @param {string} [options.out = '.cache']
+ * @param {object} [options.features]
  * @param {string} [options.distDir] if set, ignores watch events within this directory
  * @param {boolean} [options.sourcemap]
  * @param {Record<string, string>} [options.aliases]
@@ -67,7 +68,7 @@ export default function wmrMiddleware({
 			jsonPlugin(),
 			bundlePlugin({ inline: true, cwd }),
 			aliasesPlugin({ aliases, cwd: root }),
-			swcPlugin(),
+			swcPlugin({ jsx: features.jsx, from: features.from }),
 			processGlobalPlugin({ NODE_ENV: 'development', env }),
 			sassPlugin(),
 			wmrPlugin({ hot: true, preact: features.preact }),
