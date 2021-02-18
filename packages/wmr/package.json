@@ -91,7 +91,6 @@
 	"jest": {
 		"preset": "jest-puppeteer"
 	},
-
 	"dependencies": {
 		"@swc/core": "^1.2.47"
 	},
